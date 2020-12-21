@@ -15,46 +15,46 @@ import Footer from "./containers/Footer/Footer";
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
 
 const MainRouter = () => {
-	const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
 
-	const isMenuActive = (isactive) => setActive(isactive);
+  const isMenuActive = (isactive) => setActive(isactive);
 
-	const stopScroll = css`
-		position: fixed;
-		overflow-y: hidden;
-	`;
+  const stopScroll = css`
+    position: fixed;
+    overflow-y: hidden;
+  `;
 
-	const styles = css`
-		display: grid;
-		grid-template-rows: auto 1fr auto;
-	`;
-	const main = css`
-		min-height: 90vh;
-		grid-row: 2;
-	`;
+  const styles = css`
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  `;
+  const main = css`
+    min-height: 90vh;
+    grid-row: 2;
+  `;
 
-	return (
-		<div css={styles}>
-			<Header isMenuActive={isMenuActive} />
-			<main css={main}>
-				<Switch>
-					<Route exact path="/">
-						<Home />
-					</Route>
-					<Route path="/about">
-						<About />
-					</Route>
-					<Route path="/contact">
-						<Contact />
-					</Route>
-					<Route>
-						<NotFoundPage />
-					</Route>
-				</Switch>
-			</main>
-			<Footer />
-		</div>
-	);
+  return (
+    <div css={styles}>
+      <Header isMenuActive={isMenuActive} />
+      <main css={main}>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route>
+            <NotFoundPage />
+          </Route>
+        </Switch>
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default MainRouter;

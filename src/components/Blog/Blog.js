@@ -13,7 +13,7 @@ const data = [
     img: girlImg,
   },
   {
-    title: "Learn how to start selling your skill ability and advise.",
+    title: "Learn how to start selling your skills, ability and advise.",
     text:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ... learn more",
     img: skillImg,

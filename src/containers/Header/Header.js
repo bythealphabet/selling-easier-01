@@ -31,6 +31,10 @@ const topNav = (props) => {
   const header = css`
     grid-template-rows: var(--headerHeight);
     grid-row: 1;
+
+    @media (min-width: 900px) {
+      grid-template-rows: 80px;
+    }
   `;
   const logo = css`
     grid-column: 2 / span 2;
@@ -44,6 +48,10 @@ const topNav = (props) => {
     img {
       object-fit: cover;
     }
+
+    @media (min-width: 900px) {
+      align-self: flex-end;
+    }
   `;
   const hamburger = css`
     grid-column: 7 / span 1;
@@ -53,6 +61,10 @@ const topNav = (props) => {
   const menu = css`
     grid-column: 5 / -2;
     grid-row: 1;
+
+    @media (min-width: 900px) {
+      align-self: flex-end;
+    }
   `;
 
   return (

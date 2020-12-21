@@ -12,7 +12,7 @@ function GlobalStyles(props) {
           box-sizing: border-box;
         }
         :root {
-          --headerHeight: 70px;
+          --headerHeight: 100px;
           --white: #fff;
           --black: #5b5f6a;
           --red: #7c3c40;
@@ -92,7 +92,7 @@ function GlobalStyles(props) {
             minmax(1em, 1fr);
           @media (min-width: 900px) {
             grid-template-columns:
-              minmax(5em, 1fr) repeat(12, minmax(50px, 125px))
+              minmax(5em, 1fr) repeat(12, minmax(50px, 105px))
               minmax(5em, 1fr);
           }
         }

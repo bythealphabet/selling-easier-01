@@ -10,48 +10,20 @@ import { Link } from "react-router-dom";
 import Ellipse from "../../components/Svgs/Ellipse";
 import Input from "../../components/Form/Input";
 import rodneyBournImg from "../../assets/images/rodney-bourne.jpg";
-import Substract from "../../components/Svgs/Substract";
+
 import Testimonials from "../../components/Testimonials/Testimonials";
 import Blog from "../../components/Blog/Blog";
 import QuestionMark from "../../components/Svgs/QuestionMark";
 import homeQuestionsStyles from "./home-questions-styles";
 
 function Home(props) {
-  const heroGrid = css`
-    grid-template-rows: 50px 130px 50px 50px;
-  `;
-
-  const subsGrid = css`
-    margin-top: 1em;
-    grid-template-rows: 50px 160px 70px 50px;
-  `;
-
-  const whoami = css`
-    margin-top: 4em;
-    grid-template-rows: 50px 60px 30px 10px auto 10px auto;
-  `;
-
-  const testimonials = css`
-    margin-top: 2em;
-    grid-template-rows: 60px 40px 100px auto;
-  `;
-
-  const latestPost = css`
-    margin-top: 4em;
-    grid-template-rows: 60px 1fr;
-  `;
-  const questions = css`
-    background-color: var(--pink);
-    grid-template-rows: 100px 50px 40px 50px;
-    margin-top: 4em;
-  `;
   return (
     <>
-      <section className="base-grid hero" css={heroGrid}>
+      <section className="base-grid hero" css={heroStyles.heroGrid}>
         <div css={heroStyles.heroImg}></div>
         <h1 css={heroStyles.heroHeader}>
           Get More <br /> Clients <br />
-          Grow your Bussines
+          <span>Grow</span> your Bussines
           <br />
           Selling Easier
         </h1>
@@ -59,7 +31,7 @@ function Home(props) {
           start here
         </Link>
       </section>
-      <section className="base-grid subscribe" css={subsGrid}>
+      <section className="base-grid subscribe" css={subsStyles.subsGrid}>
         <Ellipse position={subsStyles.ellipse} />
         <div css={subsStyles.subsTextBox}>
           <h3 css={subsStyles.subsHeader}>Subscribe</h3>
@@ -77,7 +49,7 @@ function Home(props) {
           <button className="btn">Grow</button>
         </form>
       </section>
-      <section className="base-grid whoami" css={whoami}>
+      <section className="base-grid whoami" css={whoamiStyles.whoami}>
         <img
           src={rodneyBournImg}
           alt="Rodney Bourne Photo"
@@ -87,9 +59,11 @@ function Home(props) {
           Hi,
           <br /> my name is <br />
           Rodney Bourne
+          <br />
+          Director of Selling Easier
         </p>
         <p css={whoamiStyles.bodyText}>
-          In the past <span>23 years</span> I had the privilege helped up to{" "}
+          In the past <span>23 years</span> I had the privilege of helping up to{" "}
           <span> 3000, Companies and Professionals</span> reach their{" "}
           <span>goals</span> and gain mayor profits.
         </p>
@@ -99,8 +73,10 @@ function Home(props) {
           <span>Selling Easier</span>.
         </p>
       </section>
-      <section className="base-grid testimonials" css={testimonials}>
-        <Substract position={testimonialsStyles.substract} />
+      <section
+        className="base-grid testimonials"
+        css={testimonialsStyles.testimonialsGrid}
+      >
         <div
           className="testimonial-background"
           css={testimonialsStyles.background}
@@ -109,13 +85,16 @@ function Home(props) {
         <p css={testimonialsStyles.subHeading}>What our clients have to say</p>
         <Testimonials position={testimonialsStyles.testimonials} />
       </section>
-      <section className="base-grid latest-post" css={latestPost}>
+      <section
+        className="base-grid latest-post"
+        css={latestPostStyles.latestPost}
+      >
         <h3 css={latestPostStyles.heading}>Latest Posts</h3>
         <div css={latestPostStyles.postBox}>
           <Blog />
         </div>
       </section>
-      <section className="base-grid" css={questions}>
+      <section className="base-grid" css={questionsStyles.questions}>
         <h3 css={questionsStyles.text}>
           Answer This Questions and find out how we can help you Grow your
           bussines today.
@@ -130,7 +109,3 @@ function Home(props) {
 }
 
 export default Home;
-
-//  css={css`
-//           height: 500px;
-//         `}

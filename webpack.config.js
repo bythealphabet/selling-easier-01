@@ -31,7 +31,9 @@ module.exports = (env = {}) => {
       },
       plugins: [
         new HtmlWebpackPlugin({
-          title: `${mode === "development" ? "Development Mode" : ""}`,
+          title: `${
+            mode === "development" ? "Development Mode" : "Selling Easier"
+          }`,
           template: "./public/index.html",
         }),
       ],

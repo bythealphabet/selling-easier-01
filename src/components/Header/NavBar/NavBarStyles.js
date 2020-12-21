@@ -18,15 +18,15 @@ export const nav = css`
   @media (min-width: 900px) {
     background: transparent;
 
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: bold;
     letter-spacing: 1.5px;
     grid-column: 5 / -2;
     grid-row: 1;
   }
 
   @media (min-width: 1110px) {
-    font-size: 1.4rem;
+    /* font-size: 1rem; */
   }
 `;
 
@@ -49,7 +49,7 @@ export const ulStyles = css`
 
 export const liStyles = css`
   @media (min-width: 900px) {
-    padding: 0.8em;
+    padding: 0.8em 0.8em 0 0.8em;
 
     border: none;
     text-align: center;

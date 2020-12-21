@@ -6,6 +6,7 @@ function Substract({ position }) {
     ${position}
     svg {
       fill: var(--lightBlue);
+      width: 100%;
     }
   `;
   return (
@@ -13,7 +14,7 @@ function Substract({ position }) {
       <svg
         width="320"
         height="289"
-        viewBox="0 0 320 289"
+        viewBox="0 0 320 189"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

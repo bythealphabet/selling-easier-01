@@ -1,7 +1,10 @@
+const path = require("path");
+const CURRENT_WORKING_DIR = process.cwd();
 module.exports = () => {
-	return {
-		output: {
-			filename: "[chunkhash].js",
-		},
-	};
+  return {
+    output: {
+      path: path.join(CURRENT_WORKING_DIR, "/build"),
+      filename: "bundle.js",
+    },
+  };
 };

@@ -4,11 +4,14 @@ import logo from "../../assets/images/logo.jpg";
 
 const HeaderLogo = ({ position }) => {
   const style = css`
+    z-index: 10;
     /*height: 100%;*/
     width: 100%;
     img {
-      height: 100%;
-      width: 100%;
+      /* height: 100%; */
+      width: 100px;
+    }
+    @media (min-width: 900px) {
     }
   `;
   return (

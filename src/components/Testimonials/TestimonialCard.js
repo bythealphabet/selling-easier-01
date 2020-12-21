@@ -1,17 +1,20 @@
 import React from "react";
 import { jsx, css } from "@emotion/react"; /** @jsx jsx */
-import logo from "../../assets/images/mco.jpg";
 
 function TestimonialCard(props) {
   const { name, img, business, testimonial } = props.testimonial;
   const styles = css`
     margin-bottom: 4em;
     grid-template-rows: 5px 30px 30px 30px 10px auto;
+
     .testimonial-name,
     .testimonial-position,
     .testimonial-company,
     .testimonial-story {
       grid-column: 2 / span 4;
+      @media (min-width: 900px) {
+        font-size: 1.5rem;
+      }
     }
 
     .testimonial-name {
@@ -28,6 +31,10 @@ function TestimonialCard(props) {
 
     .testimonial-story {
       grid-row: -1;
+      font-style: italic;
+      @media (min-width: 900px) {
+        font-size: 1.2rem;
+      }
     }
 
     .testimonial-img {
@@ -42,6 +49,12 @@ function TestimonialCard(props) {
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      @media (min-width: 900px) {
+        grid-column: 4 / span 6;
+        width: 200px;
+        height: 200px;
+      }
     }
   `;
 
