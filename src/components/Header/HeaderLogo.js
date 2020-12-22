@@ -9,7 +9,7 @@ const HeaderLogo = ({ position }) => {
     width: 100%;
     img {
       /* height: 100%; */
-      width: 100px;
+      width: 180px;
     }
     @media (min-width: 900px) {
     }

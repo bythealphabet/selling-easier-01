@@ -1,4 +1,5 @@
 const { merge } = require("webpack-merge");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");
 
@@ -28,6 +29,14 @@ module.exports = (env = {}) => {
           },
         ],
       },
+      plugins: [
+        new HtmlWebpackPlugin({
+          title: `${
+            mode === "development" ? "Development Mode" : "Selling Easier"
+          }`,
+          template: "./public/index.html",
+        }),
+      ],
     },
     modeConfig(mode),
     presetConfig({ mode, presets })
