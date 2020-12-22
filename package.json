@@ -4,7 +4,7 @@
   "description": "A portfolio Website Where Rodney Bourne can Showcase his services.",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rm -r ./dist ",
+    "clean": "rm -r ./docs ",
     "dev": "webpack serve --env mode=development",
     "dev:analize": "webpack --env mode=development --env presets=analize",
     "prod": "webpack",
