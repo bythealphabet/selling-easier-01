@@ -13,6 +13,7 @@ import Footer from "./containers/Footer/Footer";
 
 // -----------Not Found Page
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
+import ghRedirect from "./ghRedirect";
 
 const MainRouter = () => {
   const [active, setActive] = useState(false);
@@ -46,6 +47,9 @@ const MainRouter = () => {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route>
+            <ghRedirect path="/selling-easier-01/" />
           </Route>
           <Route>
             <NotFoundPage />
