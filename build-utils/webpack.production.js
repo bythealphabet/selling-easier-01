@@ -1,9 +1,10 @@
 const path = require("path");
+
 const CURRENT_WORKING_DIR = process.cwd();
 module.exports = () => {
   return {
     output: {
-      path: path.join(CURRENT_WORKING_DIR, "/docs"),
+      path: path.join(CURRENT_WORKING_DIR, "/site"),
       filename: "bundle.js",
     },
   };
